@@ -9,6 +9,9 @@ export default function order() {
     const handleOrder = () => {
         console.log("Placing order");
         router.push("/");
+        // router.back() to go to prev page url in history stack
+        // router.replace("/") goes without saving in history , similar to router.push("/")
+        // router.forward() to navigate forward to next page
     }
 
     return(
