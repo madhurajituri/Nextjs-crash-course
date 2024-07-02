@@ -1,3 +1,11 @@
+import { Metadata } from "next"
+
+export const metadata : Metadata = {
+    title:{
+        absolute: "Colocation title"  // does not add | Template title to it
+    }
+}
+
 function barchart(){ //this function not displayed because not exported as default and can't be identified as a react component
     return(
         <div>
