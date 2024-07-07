@@ -3,15 +3,8 @@
 
 import Link from "next/link"
 import { usePathname } from "next/navigation"
+import { useState } from "react";
 
-const links = [
-    {
-        name: "Register", href: "/register"
-    },
-    {
-        name: "Login", href: "/login"
-    }
-]
 
 export default function RootLayout({
     children,
@@ -19,10 +12,21 @@ export default function RootLayout({
     children: React.ReactNode
 }) {
 
+    const links = [
+        {
+            name: "Register", href: "/register"
+        },
+        {
+            name: "Login", href: "/login"
+        }
+    ]
     const pathname = usePathname();
+
+    const [input, setinput] = useState("");
 
     return (
         <>
+            <div><input value={input} onChange={e=>setinput(e.target.value)} className="text-black"></input></div>
             {links.map((item, index) => {
                 const isActive = pathname.startsWith(item.href);
                 return (

@@ -1,8 +1,8 @@
-"use client"
+"use client";
 
 import { useRouter } from "next/navigation";
 
-export default function order() {
+export default function Order() {
 
     const router = useRouter();
 
